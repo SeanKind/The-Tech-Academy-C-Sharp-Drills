@@ -12,18 +12,14 @@ namespace Drill_22_Generic_types
         {
 
 
-            Employee<string> stringThings = new Employee<string>();
-            Employee<int> intThings = new Employee<int>();
-
-            stringThings.things.Add("test");
-            stringThings.things.Add("test2");
-            stringThings.things.Add("test3");
-            
-
-            intThings.things.Add(5);
-            intThings.things.Add(10);
-            intThings.things.Add(15);
-
+            Employee<string> stringThings = new Employee<string>()
+            {
+                things = new List<string> { "Apple ", "Blueberry ", "Cherry" }
+            };
+            Employee<int> intThings = new Employee<int>()
+            {
+                things = new List<int> { 5, 10, 15}
+            };
 
 
             foreach (string item in stringThings.things)
