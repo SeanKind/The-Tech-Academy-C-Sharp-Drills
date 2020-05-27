@@ -21,31 +21,25 @@ namespace Drill_23_Enums
         static void Main()
         {
 
-            //Console.WriteLine("Please enter a day of the week, starting with a capital letter: ");
-            //string entry = Console.ReadLine();
-            int i = 0;
+            
+            Console.WriteLine("Please enter a day of the week, starting with a capital letter: ");
+            string entry = Console.ReadLine();
 
-
-
-            while (i < 2)
+            try
             {
-                Console.WriteLine("Please enter a day of the week, starting with a capital letter: ");
-                string entry = Console.ReadLine();
-
-
-
-                try
-                {
-                    Console.WriteLine(Enum.Parse(typeof(daysOfTheWeek), entry));
+                Console.WriteLine(Enum.Parse(typeof(daysOfTheWeek), entry));
                     
-                }
-                catch (ArgumentException)
-                {
-                    Console.WriteLine("Please enter an actual day of the week, with a capital letter");
-                    
-                }
-
             }
+            catch (ArgumentException)
+            {
+                Console.WriteLine("Please enter an actual day of the week, with a capital letter");
+                    
+            }
+            finally
+            {
+                Console.ReadLine();
+            }
+            
 
 
 
